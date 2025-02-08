@@ -7,18 +7,15 @@ stages
    {steps { https://github.com/Pallavi2899/maven-project.git' }}
 
   stage ('validate')
-  {steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true) {
+  {steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true) {
     sh 'mvn validate'
 }
   }}
 
-  stage ('package')
-  {steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JAVA_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true) {
-    sh 'mvn clean package'
+
+
+
+          }
 }
-  }}
-
-
-
 }
 }
