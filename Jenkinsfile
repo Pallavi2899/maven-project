@@ -7,8 +7,8 @@ stages
    {
      steps 
      { 
-       https://github.com/Pallavi2899/maven-project.git' 
-         }
+      git 'https://github.com/Pallavi2899/maven-project.git' 
+     }
    }
   stage ('validate')
   {
