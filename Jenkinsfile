@@ -36,5 +36,15 @@ stages
      }
    }
           }
+   stage('Deploy the code')
+   {
+     steps 
+     { 
+      sshagent(['DEVCICD']) {
+    
+sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@18.212.197.48:/usr/share/tomcat/webapps'
+     }
+   }
+          }       
 }
 }
