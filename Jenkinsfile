@@ -42,7 +42,7 @@ stages
      { 
       sshagent(['DEVCICD']) {
     
-sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@18.212.197.48:/usr/share/tomcat/webapps'
+sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.84.238:/usr/share/tomcat/webapps'
      }
    }
           }       
